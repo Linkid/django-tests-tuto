@@ -1,0 +1,38 @@
+Test driven dev
+===============
+
+Voc
+---
+
+Functional test :
+    describes a new functionality from user’s point of view.
+
+Unit test :
+    defines how we want our code to behave — each line of code we write should
+    be tested by (at least) one of our unit tests
+
+
+Workflow
+--------
+
+1. write a functional test
+2. write a unit test
+3. write the minimum application code to get the unit test to pass
+4. run the coverage test
+5. go to 2 until you get the functional test to pass
+6. go to 1 until the app is completed
+
+
+Methods
+-------
+
+* setUp : called at the beginning
+* tearDown : called at the end
+
+
+Coverage
+--------
+
+pip install coverage
+coverage run --source='.' manage.py test myapp -v 2
+coverage html
