@@ -61,3 +61,5 @@ Errors :
 * AttributeError: 'Poll' object has no attribute 'save' → class Poll(models.Model)
 * AttributeError: 'Poll' object has no attribute 'question' → question = models.CharField()
 * CommandError: One or more models did not validate… → CharField(max_length=200)
+
+* AttributeError: 'Poll' object has no attribute 'pub_date' → pub_date = models.DateTimeField()
