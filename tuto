@@ -52,3 +52,12 @@ Django Tuto : polls
 https://docs.djangoproject.com/en/1.6/intro/tutorial01/
 
 The goal is to create a poll system.
+
+Models
+------
+
+Errors :
+* ImportError: cannot import name Poll → class Poll(object)
+* AttributeError: 'Poll' object has no attribute 'save' → class Poll(models.Model)
+* AttributeError: 'Poll' object has no attribute 'question' → question = models.CharField()
+* CommandError: One or more models did not validate… → CharField(max_length=200)
