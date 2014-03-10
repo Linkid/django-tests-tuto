@@ -63,3 +63,7 @@ Errors :
 * CommandError: One or more models did not validate… → CharField(max_length=200)
 
 * AttributeError: 'Poll' object has no attribute 'pub_date' → pub_date = models.DateTimeField()
+
+* ImportError: cannot import name Choice → class Choice(object)
+* AttributeError: 'Choice' object has no attribute 'save' → class Choice(models.Model)
+* AttributeError: 'Choice' object has no attribute 'poll' → poll = models.ForeignKey(Poll)
