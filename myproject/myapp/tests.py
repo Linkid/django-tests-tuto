@@ -16,6 +16,10 @@ class TestPollModel(TestCase):
         first_poll.pub_date = self.first_date
         first_poll.save()
 
+        first_choice = Choice()
+        first_choice.poll = Poll.objects.first()
+        first_choice.save()
+
     def test_poll(self):
         ## Get all polls and the first one
         saved_polls = Poll.objects.all()
@@ -26,10 +30,6 @@ class TestPollModel(TestCase):
         self.assertEquals(first_saved_poll.pub_date, self.first_date)
 
     def test_choice(self):
-        first_choice = Choice()
-        first_choice.poll = Poll.objects.first()
-        first_choice.save()
-
         saved_choices = Choice.objects.all()
         first_saved_choice = saved_choices[0]
 
