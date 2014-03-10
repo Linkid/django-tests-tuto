@@ -67,3 +67,6 @@ Errors :
 * ImportError: cannot import name Choice → class Choice(object)
 * AttributeError: 'Choice' object has no attribute 'save' → class Choice(models.Model)
 * AttributeError: 'Choice' object has no attribute 'poll' → poll = models.ForeignKey(Poll)
+
+* AttributeError: 'Choice' object has no attribute 'choice_text'
+* AttributeError: 'Choice' object has no attribute 'votes'

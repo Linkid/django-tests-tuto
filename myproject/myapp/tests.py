@@ -10,6 +10,7 @@ class TestPollModel(TestCase):
         ## First poll
         self.first_question = "What is your age?"
         self.first_date = datetime.datetime(2014, 3, 11, 0, 1).replace(tzinfo=utc)
+        self.first_choice_text = "42"
 
         first_poll = Poll()
         first_poll.question = self.first_question
@@ -18,6 +19,7 @@ class TestPollModel(TestCase):
 
         first_choice = Choice()
         first_choice.poll = Poll.objects.first()
+        first_choice.choice_text = self.first_choice_text
         first_choice.save()
 
     def test_poll(self):
@@ -35,3 +37,5 @@ class TestPollModel(TestCase):
 
         self.assertEquals(saved_choices.count(), 1)
         self.assertEquals(first_saved_choice.poll, Poll.objects.first())
+        self.assertEquals(first_saved_choice.choice_text, self.first_choice_text)
+        self.assertEquals(first_saved_choice.votes, 0)
