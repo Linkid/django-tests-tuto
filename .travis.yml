@@ -13,10 +13,15 @@ env:
 install:
     # This is a dependency of our Django test script
 - pip install -q Django==$DJANGO_VERSION --use-mirrors
-- pip install -r requirements.txt --use-mirrors
+#- pip install -r requirements.txt --use-mirrors
 - pip install pep8 --use-mirrors
 - pip install pyflakes --use-mirrors
+- pip install coverage coveralls --use-mirrors
 
 # command to run tests
-# script:
-- python manage.py test
+script:
+#- python myproject/manage.py test
+- coverage run source='myprojet' myproject/manage.py test
+
+after_success:
+    coveralls
