@@ -4,10 +4,10 @@ Test driven dev
 Voc
 ---
 
-Functional test :
+Functional test:
     describes a new functionality from user’s point of view.
 
-Unit test :
+Unit test:
     defines how we want our code to behave — each line of code we write should
     be tested by (at least) one of our unit tests
 
@@ -26,13 +26,20 @@ Workflow
 Methods
 -------
 
-* setUp : called at the beginning
-* tearDown : called at the end
+* setUp: called at the beginning
+* tearDown: called at the end
 
 
 Coverage
 --------
 
 pip install coverage
-coverage run --source='.' manage.py test myapp -v 2
+coverage run --source='.' manage.py test myapp
 coverage html
+
+
+Web Tools
+---------
+
+* Travis-CI: to run several tests with a configuration file (tavis.yml)
+* Coveralls: to run a coverage test
