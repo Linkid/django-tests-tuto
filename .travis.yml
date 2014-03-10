@@ -21,7 +21,7 @@ install:
 # command to run tests
 script:
 #- python myproject/manage.py test
-- coverage run source='myprojet' myproject/manage.py test
+- coverage run --source='myprojet' myproject/manage.py test
 
 after_success:
     coveralls
