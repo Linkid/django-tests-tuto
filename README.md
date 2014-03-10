@@ -2,6 +2,7 @@ django-tests-tuto
 =================
 
 [![Build Status](https://travis-ci.org/Linkid/django-tests-tuto.png?branch=master)](https://travis-ci.org/Linkid/django-tests-tuto)
+[![Coverage Status](https://coveralls.io/repos/Linkid/django-tests-tuto/badge.png)](https://coveralls.io/r/Linkid/django-tests-tuto)
 
 Ensemble de tutos pour faire des tests avec Django
 
