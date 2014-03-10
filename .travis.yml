@@ -1,0 +1,22 @@
+language: python
+
+python:
+    - 2.6
+    - 2.7
+
+env:
+    - DJANGO_VERSION=1.3
+    - DJANGO_VERSION=1.4
+    - DJANGO_VERSION=1.5
+    - DJANGO_VERSION=1.6
+
+install:
+    # This is a dependency of our Django test script
+- pip install -q Django==$DJANGO_VERSION --use-mirrors
+- pip install -r requirements.txt --use-mirrors
+- pip install pep8 --use-mirrors
+- pip install pyflakes --use-mirrors
+
+# command to run tests
+# script:
+- python manage.py test
