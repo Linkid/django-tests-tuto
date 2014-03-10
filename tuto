@@ -43,3 +43,12 @@ Web Tools
 
 * Travis-CI: to run several tests with a configuration file (tavis.yml)
 * Coveralls: to run a coverage test
+
+
+
+Django Tuto : polls
+===================
+
+https://docs.djangoproject.com/en/1.6/intro/tutorial01/
+
+The goal is to create a poll system.
