@@ -18,7 +18,7 @@ class TestPollModel(TestCase):
         first_poll.save()
 
         first_choice = Choice()
-        first_choice.poll = Poll.objects.first()
+        first_choice.poll = Poll.objects.all()[0]
         first_choice.choice_text = self.first_choice_text
         first_choice.save()
 
@@ -36,6 +36,6 @@ class TestPollModel(TestCase):
         first_saved_choice = saved_choices[0]
 
         self.assertEquals(saved_choices.count(), 1)
-        self.assertEquals(first_saved_choice.poll, Poll.objects.first())
+        self.assertEquals(first_saved_choice.poll, Poll.objects.all()[0])
         self.assertEquals(first_saved_choice.choice_text, self.first_choice_text)
         self.assertEquals(first_saved_choice.votes, 0)
