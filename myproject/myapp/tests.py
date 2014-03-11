@@ -30,6 +30,7 @@ class TestPollModel(TestCase):
         self.assertEquals(saved_polls.count(), 1)
         self.assertEquals(first_saved_poll.question, self.first_question)
         self.assertEquals(first_saved_poll.pub_date, self.first_date)
+        self.assertEquals(str(first_saved_poll), self.first_question)
 
     def test_choice(self):
         saved_choices = Choice.objects.all()
@@ -39,3 +40,5 @@ class TestPollModel(TestCase):
         self.assertEquals(first_saved_choice.poll, Poll.objects.all()[0])
         self.assertEquals(first_saved_choice.choice_text, self.first_choice_text)
         self.assertEquals(first_saved_choice.votes, 0)
+        self.assertEquals(str(first_saved_choice), self.first_choice_text)
+

@@ -70,3 +70,6 @@ Errors :
 
 * AttributeError: 'Choice' object has no attribute 'choice_text'
 * AttributeError: 'Choice' object has no attribute 'votes'
+
+* AssertionError: 'Poll object' != 'What is your age?' → Poll.__unicode__()
+* AssertionError: 'Choice object' != '42' → Choice.__unicode__()
