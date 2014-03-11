@@ -52,11 +52,13 @@ class TestPollModel(TestCase):
     def test_choice_saved(self):
         saved_choices = Choice.objects.all()
         first_saved_choice = saved_choices[0]
+        first_poll_linked = Poll.objects.all()[0]
 
         self.assertEquals(saved_choices.count(), 1)
-        self.assertEquals(first_saved_choice.poll, Poll.objects.all()[0])
+        self.assertEquals(first_saved_choice.poll, first_poll_linked)
         self.assertEquals(first_saved_choice.choice_text, self.first_choice_text)
         self.assertEquals(first_saved_choice.votes, 0)
+        self.assertEquals(first_poll_linked.choice_set.count(), 1)
 
     def test_choice_unicode(self):
         first_saved_choice = Choice.objects.all()[0]
