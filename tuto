@@ -73,3 +73,6 @@ Errors :
 
 * AssertionError: 'Poll object' != 'What is your age?' → Poll.__unicode__()
 * AssertionError: 'Choice object' != '42' → Choice.__unicode__()
+
+* AttributeError: 'Poll' object has no attribute 'was_published_recently' → return True
+* AssertionError: True is not false
