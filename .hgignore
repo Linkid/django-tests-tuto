@@ -2,5 +2,6 @@ syntax:glob
 *.pyc
 *.swp
 *.orig
+db.sqlite3
 .coverage
 .git
